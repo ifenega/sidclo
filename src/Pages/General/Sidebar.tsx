@@ -55,18 +55,7 @@ const SidebarItem = (props:Props) => {
   const pathnames = pathname.split('/').filter(x => x)
 
   return (
-    <Link className={`relative`} to={props.path}>
-          {props.path.split('/').filter(x=>x).every(ai => pathnames.includes(ai)) && <div className={`bg-primary h-[40px] w-[90%] rounded-l-[8px]  absolute left-[-2px] right-0`}></div>}
-
-          
-          <div className={`${props.path.split('/').filter(x=>x).every(ai => pathnames.includes(ai)) ? "bg-[#F6F2F7] text-primary " : "bg-white text-body1" }  relative w-full pt rounded-l-lg rounded-r-lg z-10 flex gap-2 items-center py-2 pl-[14px]`}>
-            
-            <img src={ !props.path.split('/').filter(x=>x).every(ai => pathnames.includes(ai)) ? props.icon : props.iconActive} alt='overview-icon' />
-            <h1>{props.itemName}</h1>
-          </div>
-
-
-        </Link>
+    <div></div>
 
   )
 }
